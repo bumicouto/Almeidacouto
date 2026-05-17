@@ -1,0 +1,1261 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>João Paulo de Almeida Couto — Família Jory / Almeida Couto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light only;
+  --ink:#1a1410;
+  --paper:#f4ede0;
+  --paper-2:#ebe1ce;
+  --paper-3:#ddd0b7;
+  --rust:#7a2e1f;
+  --rust-dim:#9c5142;
+  --sepia:#5a3e22;
+  --sepia-strong:#3d2a17;
+  --gold:#a07d2c;
+  --green:#2e5237;
+  --amber:#b8860b;
+  --shadow:rgba(60,40,20,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  background:var(--paper);
+  color:#15100c;
+  line-height:1.55;
+  font-size:18px;
+  background-image:
+    radial-gradient(at 12% 8%, rgba(160,125,44,.08) 0, transparent 40%),
+    radial-gradient(at 88% 92%, rgba(122,46,31,.06) 0, transparent 45%),
+    repeating-linear-gradient(0deg, transparent 0 3px, rgba(90,62,34,.02) 3px 4px);
+}
+
+/* ---------- header ---------- */
+.masthead{
+  border-bottom:1px double var(--sepia);
+  padding:48px 32px 36px;
+  text-align:center;
+  background:linear-gradient(180deg, var(--paper-2) 0%, var(--paper) 100%);
+  position:relative;
+}
+.masthead::before,.masthead::after{
+  content:"";display:block;width:60%;max-width:480px;margin:0 auto 16px;
+  height:1px;background:var(--sepia);opacity:.4;
+}
+.masthead::after{margin:18px auto 0;}
+.kicker{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.35em;text-transform:uppercase;
+  color:#3d2a17;margin-bottom:18px;
+}
+h1.masthead-title{
+  font-family:'Fraunces',serif;
+  font-weight:700;font-size:clamp(36px,6vw,68px);
+  line-height:1;letter-spacing:-.02em;color:var(--ink);
+}
+h1.masthead-title em{
+  font-style:italic;font-weight:400;color:var(--rust);
+}
+.masthead-sub{
+  margin-top:18px;font-style:italic;font-size:19px;color:#3d2a17;
+  max-width:680px;margin-left:auto;margin-right:auto;
+}
+.lineage{
+  margin-top:24px;
+  font-family:'JetBrains Mono',monospace;font-size:12px;
+  color:#3d2a17;letter-spacing:.04em;
+  line-height:1.8;
+}
+.lineage strong{color:var(--rust);font-weight:500}
+
+/* ---------- legend ---------- */
+.legend{
+  display:flex;flex-wrap:wrap;gap:8px;justify-content:center;
+  margin:28px auto 0;max-width:980px;padding:0 16px;
+}
+.tag{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  padding:5px 11px;border-radius:2px;
+  letter-spacing:.06em;text-transform:uppercase;
+}
+.tag .dot{width:7px;height:7px;border-radius:50%;display:inline-block}
+.tag-confirmado{background:#e3ead8;color:#2e5237;border:1px solid #b9c9a5}
+.tag-confirmado .dot{background:#2e5237}
+.tag-hipotese{background:#f3e6c8;color:#7d5d10;border:1px solid #d9c084}
+.tag-hipotese .dot{background:#a07d2c}
+.tag-testemunho{background:#e7dfd0;color:#5a3e22;border:1px solid #c6b78f}
+.tag-testemunho .dot{background:#8a6d35}
+.tag-conflito{background:#f1d9d2;color:#7a2e1f;border:1px solid #d8a999}
+.tag-conflito .dot{background:#7a2e1f}
+.tag-pendente{background:#e4dfd7;color:#5a4a3a;border:1px solid #bcb09b}
+.tag-pendente .dot{background:#8a7a5a}
+
+/* ---------- nav ---------- */
+nav.toc{
+  position:sticky;top:0;z-index:50;
+  background:rgba(244,237,224,.94);
+  backdrop-filter:saturate(140%) blur(8px);
+  border-bottom:1px solid var(--paper-3);
+  padding:12px 16px;
+  overflow-x:auto;white-space:nowrap;
+}
+nav.toc a{
+  display:inline-block;margin:0 14px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:#3d2a17;text-decoration:none;
+  padding:4px 0;border-bottom:1px solid transparent;
+}
+nav.toc a:hover{color:var(--rust);border-bottom-color:var(--rust)}
+
+/* ---------- sections ---------- */
+main{max-width:1100px;margin:0 auto;padding:32px 24px 80px}
+section{margin:64px 0;scroll-margin-top:60px}
+section.intro{margin-top:32px}
+
+.section-label{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  letter-spacing:.3em;text-transform:uppercase;color:var(--rust);
+  margin-bottom:8px;
+}
+h2{
+  font-family:'Fraunces',serif;font-weight:600;
+  font-size:clamp(28px,3.5vw,42px);
+  line-height:1.1;color:var(--ink);
+  margin-bottom:6px;letter-spacing:-.015em;
+}
+h2 .ornament{color:var(--rust-dim);font-weight:400}
+.section-tag{
+  font-style:italic;color:#3d2a17;font-size:17px;
+  margin-bottom:28px;
+}
+
+h3{
+  font-family:'Fraunces',serif;font-weight:600;
+  font-size:24px;margin:32px 0 10px;color:var(--rust);
+}
+h4{
+  font-family:'Cormorant Garamond',serif;font-weight:600;
+  font-size:20px;margin:18px 0 6px;color:var(--ink);
+}
+
+p{margin:8px 0}
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+
+/* ---------- cards ---------- */
+.card{
+  background:#fbf6e9;
+  border:1px solid var(--paper-3);
+  border-left:3px solid var(--rust);
+  padding:20px 24px;margin:18px 0;
+  box-shadow:0 1px 3px var(--shadow);
+}
+.card.confirmado{border-left-color:#2e5237}
+.card.hipotese{border-left-color:var(--amber)}
+.card.testemunho{border-left-color:#8a6d35}
+.card.conflito{border-left-color:#7a2e1f;background:#fbf0eb}
+.card.pendente{border-left-color:#8a7a5a}
+
+.card h3{margin-top:0}
+.card ul{margin:8px 0 8px 22px}
+.card li{margin:4px 0}
+
+.note{
+  margin-top:10px;padding:10px 14px;
+  background:rgba(160,125,44,.12);
+  border-left:2px solid var(--gold);
+  font-size:16px;font-style:italic;color:#3d2a17;
+}
+.note strong{color:#1a1410}
+.note.alert{background:rgba(122,46,31,.1);border-left-color:var(--rust);color:#5e1f12}
+.note.alert strong{color:#3d100a}
+
+/* ---------- timeline ---------- */
+.timeline{
+  position:relative;padding-left:28px;margin:24px 0;
+}
+.timeline::before{
+  content:"";position:absolute;left:6px;top:8px;bottom:8px;
+  width:1px;background:var(--sepia);opacity:.4;
+}
+.tl-item{
+  position:relative;padding:6px 0 6px 14px;margin-bottom:14px;
+}
+.tl-item::before{
+  content:"";position:absolute;left:-26px;top:14px;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--rust);
+}
+.tl-item.confirmado::before{border-color:#2e5237}
+.tl-item.hipotese::before{border-color:var(--amber)}
+.tl-item.testemunho::before{border-color:#8a6d35}
+.tl-date{
+  font-family:'JetBrains Mono',monospace;font-size:12px;
+  color:var(--rust);letter-spacing:.05em;display:block;margin-bottom:2px;
+}
+.tl-text{font-size:17px;line-height:1.5;color:#1a1410}
+.tl-text .micro{
+  display:inline-block;margin-left:6px;
+  font-family:'JetBrains Mono',monospace;font-size:9.5px;
+  letter-spacing:.08em;text-transform:uppercase;color:#4a3520;
+}
+
+/* ---------- gen tree ---------- */
+.gen{
+  border-top:1px solid var(--paper-3);
+  padding-top:20px;margin-top:32px;
+}
+.gen-label{
+  display:inline-block;font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:#fff;background:var(--rust);padding:4px 10px;
+  margin-bottom:14px;
+}
+.gen-label.matriarch{background:var(--sepia)}
+.gen-label.linha{background:var(--green)}
+
+.couple{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  font-family:'Fraunces',serif;font-size:21px;font-weight:600;
+  margin:8px 0;
+}
+.couple .x{color:var(--rust);font-weight:400;font-style:italic}
+
+.kids{
+  margin:12px 0 8px 26px;border-left:1px dashed var(--sepia);
+  padding-left:18px;
+}
+.kid{margin:10px 0}
+.kid-name{font-weight:600;font-family:'Fraunces',serif;font-size:18px}
+
+/* ---------- gallery ---------- */
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:22px;margin-top:24px;
+}
+.doc-card{
+  background:#fcfaf3;border:1px solid var(--paper-3);
+  padding:0;overflow:hidden;
+  box-shadow:0 2px 6px var(--shadow);
+  transition:transform .25s ease, box-shadow .25s ease;
+  display:flex;flex-direction:column;
+}
+.doc-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px var(--shadow)}
+.doc-thumb{
+  display:block;width:100%;aspect-ratio:1/1;overflow:hidden;
+  background:#d6cbb0;border-bottom:1px solid var(--paper-3);
+}
+.doc-thumb img{
+  width:100%;height:100%;object-fit:cover;object-position:top;
+  display:block;filter:sepia(.08) saturate(.96);
+}
+.doc-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex-grow:1}
+.doc-date{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  letter-spacing:.12em;color:var(--rust);margin-bottom:4px;
+}
+.doc-title{
+  font-family:'Fraunces',serif;font-weight:600;font-size:16px;
+  line-height:1.25;margin-bottom:6px;color:var(--ink);
+}
+.doc-what{font-size:14.5px;line-height:1.45;color:#3d2a17;margin-bottom:8px;flex-grow:1}
+.doc-src{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  color:#4a3520;letter-spacing:.04em;line-height:1.5;
+  border-top:1px dotted var(--paper-3);padding-top:8px;margin-top:auto;
+}
+.doc-src a{color:var(--rust);text-decoration:underline;position:relative;z-index:2}
+.doc-src a:hover{color:#5e1f12}
+
+/* lightbox */
+.lightbox{
+  display:none;position:fixed;inset:0;
+  background:rgba(20,15,10,.92);z-index:100;
+  align-items:center;justify-content:center;
+  padding:24px;cursor:zoom-out;
+}
+.lightbox.on{display:flex}
+.lightbox img{max-width:100%;max-height:92vh;box-shadow:0 12px 60px rgba(0,0,0,.6);background:#fff}
+.lightbox-caption{
+  position:absolute;bottom:14px;left:0;right:0;text-align:center;
+  color:#f4ede0;font-family:'JetBrains Mono',monospace;font-size:12px;
+  letter-spacing:.06em;padding:0 24px;
+}
+
+/* ---------- carta ---------- */
+.carta{
+  background:#f9f1da;
+  border:1px solid #d9c084;
+  padding:32px 36px;margin:24px 0;
+  font-size:17.5px;line-height:1.75;
+  font-family:'Cormorant Garamond',serif;
+  background-image:repeating-linear-gradient(180deg, transparent 0 28px, rgba(160,125,44,.08) 28px 29px);
+}
+.carta p{margin:14px 0}
+.carta .opening{font-style:italic;color:var(--rust);text-align:center;margin-bottom:18px}
+
+/* ---------- footer ---------- */
+footer{
+  text-align:center;padding:40px 24px;
+  border-top:1px double var(--sepia);
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.12em;color:#3d2a17;
+}
+
+/* ---------- panorama visual (didático) ---------- */
+.panorama-intro{
+  background:#fbf6e9;border:1px solid var(--paper-3);
+  border-left:3px solid var(--gold);
+  padding:18px 22px;margin:18px 0 28px;
+  font-style:italic;color:#3d2a17;
+}
+.panorama-block{
+  margin:36px 0 28px;
+}
+.panorama-block h3{
+  font-family:'Fraunces',serif;font-size:22px;
+  color:var(--sepia-strong);margin-bottom:4px;
+}
+.panorama-block .pb-sub{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:var(--rust);margin-bottom:14px;
+}
+.panorama-block .pb-more{
+  display:inline-block;margin-top:14px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--rust);text-decoration:none;
+  border-bottom:1px solid var(--rust);padding-bottom:2px;
+}
+.panorama-block .pb-more:hover{color:#5e1f12;border-bottom-color:#5e1f12}
+
+/* árvore — SVG real com linhas de descendência */
+.fam-tree-wrap{
+  background:#fcfaf3;border:1px solid var(--paper-3);
+  padding:16px 12px;overflow-x:auto;
+  box-shadow:0 1px 3px var(--shadow);
+}
+.fam-tree-svg{
+  display:block;margin:0 auto;
+  width:100%;height:auto;min-width:680px;
+  font-family:'Fraunces',serif;
+}
+.fam-tree-svg .ftn-box{fill:#fff;stroke:#ddd0b7;stroke-width:1.5}
+.fam-tree-svg .ftn-box.linha{fill:#fbf0eb;stroke:#7a2e1f;stroke-width:2}
+.fam-tree-svg .ftn-box.hipotese{fill:#fcf6e3;stroke:#b8860b;stroke-width:1.5;stroke-dasharray:4 3}
+.fam-tree-svg .ftn-box.aside{fill:#f4ede0;stroke:#a89880;stroke-width:1.5;stroke-dasharray:1 2}
+.fam-tree-svg .ftn-name{
+  font-weight:600;font-size:13px;fill:#1a1410;
+  text-anchor:middle;font-family:'Fraunces',serif;
+}
+.fam-tree-svg .ftn-name.linha{fill:#7a2e1f}
+.fam-tree-svg .ftn-sur{
+  font-style:italic;font-weight:500;fill:#7a2e1f;
+}
+.fam-tree-svg .ftn-meta{
+  font-size:10px;fill:#5a4a3a;
+  text-anchor:middle;
+  font-family:'JetBrains Mono',monospace;letter-spacing:.02em;
+}
+.fam-tree-svg .ftn-place{
+  font-size:10.5px;fill:#5a3e22;
+  text-anchor:middle;font-style:italic;
+  font-family:'Cormorant Garamond',serif;
+}
+.fam-tree-svg .link-line{
+  fill:none;stroke:#7a5e3a;stroke-width:1.4;opacity:.65;
+}
+.fam-tree-svg .link-line.linha{stroke:#7a2e1f;stroke-width:2;opacity:.9}
+.fam-tree-svg .link-marriage{
+  fill:none;stroke:#7a2e1f;stroke-width:1.5;opacity:.5;
+  stroke-dasharray:3 3;
+}
+.fam-tree-svg .gen-tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9.5px;letter-spacing:.18em;
+  fill:#7a5e3a;text-anchor:start;
+  text-transform:uppercase;
+}
+.fam-tree-svg .q-badge{
+  fill:#b8860b;
+}
+.fam-tree-svg .q-badge-text{
+  fill:#fff;font-size:10px;font-weight:700;
+  text-anchor:middle;font-family:'JetBrains Mono',monospace;
+}
+.tree-legend{
+  display:flex;flex-wrap:wrap;gap:14px;justify-content:center;
+  margin-top:16px;padding-top:14px;
+  border-top:1px dotted var(--paper-3);
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  color:#5a4a3a;letter-spacing:.04em;
+}
+.tree-legend span{display:inline-flex;align-items:center;gap:6px}
+.tl-swatch{
+  display:inline-block;width:16px;height:11px;border:1.5px solid #ddd0b7;
+}
+.tl-swatch.linha{border-color:#7a2e1f;background:#fbf0eb;border-width:2px}
+.tl-swatch.hipotese{border-color:#b8860b;border-style:dashed;background:#fcf6e3}
+.tl-swatch.aside{border-style:dotted;background:#f4ede0}
+
+/* organograma cronológico (vertical com ano + local + evento) */
+.chrono-org{
+  position:relative;
+  padding:8px 0 8px 0;margin:24px 0;
+}
+.chrono-org::before{
+  content:"";position:absolute;
+  left:62px;top:0;bottom:0;width:2px;
+  background:var(--sepia);opacity:.4;
+}
+.chrono-card{
+  position:relative;display:flex;align-items:stretch;
+  margin-bottom:18px;
+}
+.chrono-year{
+  flex:0 0 56px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:13px;font-weight:600;
+  color:var(--rust);text-align:right;
+  padding-right:18px;padding-top:14px;
+  letter-spacing:.02em;
+}
+.chrono-dot{
+  position:absolute;left:56px;top:18px;
+  width:14px;height:14px;border-radius:50%;
+  background:#fbf6e9;border:2.5px solid var(--rust);
+  box-sizing:border-box;z-index:2;
+}
+.chrono-dot.green{border-color:var(--green)}
+.chrono-dot.gold{border-color:var(--amber)}
+.chrono-dot.sepia{border-color:var(--sepia)}
+.chrono-body{
+  flex:1;background:#fcfaf3;
+  border:1px solid var(--paper-3);
+  border-left:3px solid var(--rust);
+  margin-left:24px;padding:12px 16px 14px;
+  box-shadow:0 1px 2px rgba(60,40,20,.08);
+}
+.chrono-body.green{border-left-color:var(--green)}
+.chrono-body.gold{border-left-color:var(--amber)}
+.chrono-body.sepia{border-left-color:var(--sepia)}
+.chrono-place{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:#5a4a3a;
+  margin-bottom:4px;display:block;
+}
+.chrono-event{
+  font-family:'Fraunces',serif;font-size:16px;
+  font-weight:600;color:var(--ink);
+  display:block;line-height:1.3;margin-bottom:4px;
+}
+.chrono-who{
+  font-family:'Cormorant Garamond',serif;
+  font-size:14.5px;color:#3d2a17;line-height:1.45;
+  font-style:italic;
+}
+.chrono-who strong{font-style:normal;color:var(--rust);font-weight:600}
+.chrono-src{
+  display:inline-block;margin-top:6px;
+  font-family:'JetBrains Mono',monospace;font-size:9.5px;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:#5a4a3a;background:#f4ede0;
+  padding:2px 7px;border-radius:2px;
+}
+.chrono-src.hipotese{background:#fcf6e3;color:#7d5d10}
+.chrono-src.testemunho{background:#e7dfd0;color:#5a3e22}
+
+/* ---------- small ---------- */
+@media (max-width:640px){
+  body{font-size:17px}
+  .masthead{padding:32px 18px 24px}
+  main{padding:16px 14px 60px}
+  section{margin:44px 0}
+  .card{padding:16px 18px}
+  .carta{padding:22px 18px;font-size:16px}
+  .chrono-org::before{left:48px}
+  .chrono-year{flex-basis:42px;font-size:12px;padding-right:12px}
+  .chrono-dot{left:42px}
+  .chrono-body{margin-left:20px;padding:10px 13px 12px}
+  .chrono-event{font-size:15px}
+  .chrono-who{font-size:14px}
+}
+
+/* ---------- joao-paulo extras ---------- */
+.jp-hero{
+  background:linear-gradient(180deg, var(--paper-2) 0%, #fbf6e9 100%);
+  border:1px solid var(--paper-3);
+  border-left:4px solid var(--rust);
+  padding:30px 32px;margin:28px 0 40px;
+  box-shadow:0 1px 4px var(--shadow);
+}
+.jp-hero h3{margin-top:0;color:var(--sepia-strong);font-size:26px}
+.jp-hero p{margin:10px 0;font-size:17.5px}
+.jp-hero .jp-tag{
+  display:inline-block;margin-top:14px;
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--rust);background:#fff;border:1px solid var(--rust);
+  padding:4px 10px;border-radius:2px;margin-right:8px;
+}
+
+.marriages-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:24px;margin-top:24px;
+}
+.m-card{
+  background:#fcfaf3;border:1px solid var(--paper-3);
+  padding:0;display:flex;flex-direction:column;
+  box-shadow:0 2px 6px var(--shadow);
+}
+.m-card.uncertain{
+  background:repeating-linear-gradient(45deg,#fcfaf3 0 12px,#f4ede0 12px 13px);
+  opacity:.95;
+}
+.m-head{
+  padding:18px 22px 14px;
+  border-bottom:1px solid var(--paper-3);
+  background:linear-gradient(180deg,var(--paper-2),#fcfaf3);
+  text-align:center;
+}
+.m-order{
+  font-family:'Fraunces',serif;font-style:italic;
+  font-size:46px;font-weight:700;line-height:.9;
+  color:var(--rust);display:block;
+}
+.m-card.uncertain .m-order{color:#8a6d35}
+.m-order-label{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:#5a4a3a;display:block;margin-top:2px;
+}
+.m-spouse{
+  font-family:'Fraunces',serif;font-weight:600;font-size:22px;
+  line-height:1.2;color:var(--ink);margin-top:12px;
+}
+.m-dates{
+  margin-top:4px;font-style:italic;color:#3d2a17;font-size:14.5px;
+}
+.m-body{padding:14px 22px 18px}
+.m-meta{
+  font-size:14.5px;line-height:1.55;color:#3d2a17;
+  padding-bottom:12px;margin-bottom:12px;
+  border-bottom:1px dashed var(--paper-3);
+}
+.m-meta strong{color:var(--ink)}
+.m-kids-label{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--rust);text-align:center;display:block;margin-bottom:12px;
+}
+.m-kids{list-style:none;display:flex;flex-direction:column;gap:12px}
+.m-kid{
+  padding:12px 14px;background:#fbf6e9;
+  border-left:3px solid var(--paper-3);
+}
+.m-kid.linha{
+  border-left-color:var(--rust);
+  background:linear-gradient(to right, #fbf0eb, #fbf6e9 50%);
+}
+.m-kid .k-name{
+  font-family:'Fraunces',serif;font-weight:600;font-size:16.5px;
+  color:var(--ink);line-height:1.25;
+}
+.m-kid .k-name .surn{font-weight:500;color:var(--rust)}
+.m-kid .k-info{
+  margin-top:3px;font-size:13px;font-style:italic;color:#3d2a17;line-height:1.4;
+}
+.m-kid .k-spouse{
+  margin-top:6px;font-size:13px;color:#3d2a17;line-height:1.45;
+}
+.m-kid .k-spouse strong{color:var(--ink)}
+.m-kid .k-grand{
+  margin-top:6px;font-size:12px;color:#5a4a3a;line-height:1.55;
+  padding-left:10px;border-left:1px solid var(--paper-3);
+}
+.k-tag{
+  display:inline-block;margin-left:5px;vertical-align:1px;
+  font-family:'JetBrains Mono',monospace;font-size:9px;
+  padding:1px 6px;letter-spacing:.1em;text-transform:uppercase;
+  border-radius:2px;font-weight:500;
+}
+.k-tag.conf{background:#e3ead8;color:#2e5237;border:1px solid #b9c9a5}
+.k-tag.hip{background:#f3e6c8;color:#7d5d10;border:1px solid #d9c084}
+.k-tag.test{background:#e7dfd0;color:#5a3e22;border:1px solid #c6b78f}
+
+.back-link{
+  display:inline-block;margin-bottom:8px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--rust);text-decoration:none;
+  border-bottom:1px solid var(--rust);padding-bottom:2px;
+}
+.back-link:hover{color:#5e1f12;border-bottom-color:#5e1f12}
+.back-link::before{content:"← ";}
+
+.career-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:18px;margin:20px 0;
+}
+.career-card{
+  background:#fcfaf3;border:1px solid var(--paper-3);
+  border-top:3px solid var(--sepia);padding:16px 18px;
+}
+.career-card .yr{
+  font-family:'JetBrains Mono',monospace;font-size:12px;
+  color:var(--rust);letter-spacing:.06em;
+}
+.career-card h4{margin:2px 0 6px;font-size:18px;color:var(--ink)}
+.career-card p{font-size:14.5px;line-height:1.5;color:#3d2a17}
+
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="kicker">Família Jory · Almeida Couto · página dedicada</div>
+  <h1 class="masthead-title">Dr. João Paulo de <em>Almeida Couto</em></h1>
+  <p class="masthead-sub">O trisavô. Quatro relacionamentos, cinco estados brasileiros, uma carreira no Judiciário do Império tardio e da Primeira República.</p>
+  <div class="lineage">
+    Bahia <span style="color:var(--rust)">→</span> São Paulo <span style="color:var(--rust)">→</span> Goiás <span style="color:var(--rust)">→</span> Mato Grosso <span style="color:var(--rust)">→</span> Alagoas <span style="color:var(--rust)">→</span> Acre <span style="color:var(--rust)">→</span> Pará <span style="color:var(--rust)">→</span> Bahia
+  </div>
+  <div class="legend">
+    <span class="tag tag-confirmado"><span class="dot"></span>Confirmado</span>
+    <span class="tag tag-hipotese"><span class="dot"></span>Hipótese</span>
+    <span class="tag tag-testemunho"><span class="dot"></span>Testemunho oral</span>
+    <span class="tag tag-pendente"><span class="dot"></span>Pendente</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <a href="index.html">← Página principal</a>
+  <a href="#sobre">Quem foi</a>
+  <a href="#carreira">Carreira</a>
+  <a href="#cronologia-jp">Cronologia</a>
+  <a href="#casamentos">Casamentos</a>
+  <a href="#filhos">Filhos</a>
+  <a href="#hipoteses-jp">Hipóteses</a>
+  <a href="#fontes-jp">Fontes</a>
+</nav>
+
+<main>
+
+<a href="index.html" class="back-link">Voltar para a página principal</a>
+
+<!-- ============== QUEM FOI ============== -->
+<section id="sobre" class="intro" style="margin-top:24px">
+  <div class="section-label">·····  O trisavô  ·····</div>
+  <h2>Quem foi João Paulo <span class="ornament">/</span></h2>
+  <p class="section-tag">Bahia de origem, paulista por escolha, brasileiro por trajeto: deixou rastros de Salvador a Rio Branco.</p>
+
+  <div class="jp-hero">
+    <h3>Dr. João Paulo de Almeida Couto</h3>
+    <p><strong>Nascimento:</strong> entre 1865 e 1870, na Bahia <span class="k-tag test" style="font-size:9px">testemunho oral</span></p>
+    <p><strong>Falecimento:</strong> desconhecido. Confirmado vivo em jan/1929 (Salvador). Hipótese familiar: ~1933.</p>
+    <p><strong>Profissão:</strong> Juiz de Direito. Passou por comarcas em Mato Grosso (Paranaíba, 1908), Alagoas (Juiz Substituto Federal, 1911–1912) e Acre (Juiz de Direito, depois de 1912). Testemunho oral o coloca também como Presidente do Tribunal de Apelação do Acre — <em>hipótese ainda não confirmada documentalmente</em>.</p>
+    <p><strong>Casamentos:</strong> três confirmados (Mélanie Jory, Alice Portella, Brasília Portela) e um quarto relatado pelo testemunho oral (uma quarta irmã Portela que esperava casar quando ele morreu).</p>
+    <span class="jp-tag">FamilySearch · PM19-V7M</span>
+    <span class="jp-tag">JFAL Memorial</span>
+    <span class="jp-tag">TJMS · Paranaíba 1908</span>
+  </div>
+</section>
+
+
+<!-- ============== CARREIRA ============== -->
+<section id="carreira">
+  <div class="section-label">·····  Trajetória profissional  ·····</div>
+  <h2>Uma carreira em movimento <span class="ornament">/</span></h2>
+  <p class="section-tag">Magistrado itinerante — da Bahia paroquial ao Acre recém-incorporado ao Brasil em 1903.</p>
+
+  <div class="career-grid">
+    <div class="career-card">
+      <div class="yr">1888 · ~22-25 anos</div>
+      <h4>Saída da Bahia</h4>
+      <p>Em 11-mar-1888, embarca no vapor <em>Valparaiso</em> da Bahia para Santos. É o início da fase paulista — quando aparece nos batismos como padrinho em Santa Ifigênia (1894 e 1896) e batiza os filhos Carlos (1898) e Alfredo (1899) no Brás.</p>
+    </div>
+
+    <div class="career-card">
+      <div class="yr">1908</div>
+      <h4>Comarca de Paranaíba (MT)</h4>
+      <p>Juiz na comarca de Paranaíba — então no Mato Grosso, hoje Mato Grosso do Sul. Confirmado pela matéria <em>"Rastros da História"</em> do TJMS / Jornal O Progresso.</p>
+    </div>
+
+    <div class="career-card">
+      <div class="yr">~1907</div>
+      <h4>Passagem por Goiás</h4>
+      <p>A filha Alice nasce em Goiás por volta de 1906-1907. Sugere atuação como juiz na região nesse período, embora o cargo específico não esteja confirmado.</p>
+    </div>
+
+    <div class="career-card">
+      <div class="yr">1911-06 a 1912-06</div>
+      <h4>Juiz Substituto Federal — Alagoas</h4>
+      <p>Assume após a saída de Julio Auto e permanece um ano, sendo substituído por Oscar de Carvalho e Silva. Fonte: Memorial da Justiça Federal de Alagoas (JFAL).</p>
+    </div>
+
+    <div class="career-card">
+      <div class="yr">após 1912</div>
+      <h4>Juiz de Direito no Acre</h4>
+      <p>O mesmo Memorial JFAL afirma: <em>"Posteriormente, foi Juiz de Direito no Acre."</em> O Acre tornou-se Território Federal em 1904; o Tribunal de Apelação foi instalado em Sena Madureira em 1908 — João Paulo chega nesse momento de formação institucional.</p>
+    </div>
+
+    <div class="career-card">
+      <div class="yr">1925</div>
+      <h4>Volta à Bahia</h4>
+      <p>Aparece com o título de "Dr." em lista de autoridades baianas no Diário Oficial da Bahia (14-jul-1925, p.6814), em recepção de telegrama do Ministro da Marinha sobre a renovação da Esquadra Nacional.</p>
+    </div>
+
+    <div class="career-card">
+      <div class="yr">1929-01-20</div>
+      <h4>Último registro confirmado</h4>
+      <p>Diário Oficial da Bahia documenta seu desembarque em Salvador vindo de Manaus, no vapor Baependy, com Brasília, Aníbal e Maria José. É o último documento que comprovadamente o localiza vivo.</p>
+    </div>
+
+    <div class="career-card hipotese" style="border-top-color:var(--amber)">
+      <div class="yr">~1933 · hipótese</div>
+      <h4>Falecimento</h4>
+      <p>A família afirma falecimento ~1933, sem fonte identificada. Pesquisa pendente em arquivos de Salvador, Belém e Manaus para localizar o óbito.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Atenção:</strong> a foto que aparece na página do Memorial da JFAL é uma <em>reconstrução por inteligência artificial</em> — não existe foto real confirmada de João Paulo. Toda referência a essa imagem deve esclarecer essa origem.
+  </div>
+</section>
+
+
+<!-- ============== CRONOLOGIA ============== -->
+<section id="cronologia-jp">
+  <div class="section-label">·····  Linha do tempo  ·····</div>
+  <h2>Cronologia documentada <span class="ornament">/</span></h2>
+  <p class="section-tag">Apenas o que tem fonte primária — eventos inferidos aparecem marcados.</p>
+
+  <div class="chrono-org">
+
+    <div class="chrono-card">
+      <div class="chrono-year">~1868</div>
+      <div class="chrono-dot sepia"></div>
+      <div class="chrono-body sepia">
+        <span class="chrono-place">Bahia</span>
+        <span class="chrono-event">Nascimento</span>
+        <div class="chrono-who">Provável Bahia, entre 1865-1870, segundo <strong>testemunho oral</strong> da família.</div>
+        <span class="chrono-src testemunho">testemunho oral</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1888</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">Bahia → São Paulo</span>
+        <span class="chrono-event">Embarca no vapor Valparaiso</span>
+        <div class="chrono-who">Lista de embarque de 11-mar-1888, Bahia para Santos. Início da fase paulista.</div>
+        <span class="chrono-src">lista de embarque</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">~1892</div>
+      <div class="chrono-dot gold"></div>
+      <div class="chrono-body gold">
+        <span class="chrono-place">São Paulo · Brás</span>
+        <span class="chrono-event">Nasce o primogênito Carlos</span>
+        <div class="chrono-who">Carlos nasce em 09-jun-1892, batizado em 1898 no Brás. Padrinho: Carlos Martiniano de Amarante Cruz. <strong>Casamento com Mélanie ainda não localizado documentalmente</strong> (entre 1892-1898).</div>
+        <span class="chrono-src">batismo Brás 1898</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1893</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">São Paulo</span>
+        <span class="chrono-event">Nasce Alfredo, o bisavô</span>
+        <div class="chrono-who">Alfredo d'Almeida Couto, 20-dez-1893, batizado no Brás em 1899. <strong>Linha direta até a pesquisadora.</strong></div>
+        <span class="chrono-src">batismo Brás 1899</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1894 · 1896</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">São Paulo · Santa Ifigênia</span>
+        <span class="chrono-event">João Paulo e Mélanie como padrinhos</span>
+        <div class="chrono-who">02-set-1894: padrinhos de <strong>João Paradella</strong>. 29-mar-1896: padrinhos de <strong>Melani Paradelo</strong> (afilhada que recebe o nome em homenagem à madrinha).</div>
+        <span class="chrono-src">batismos Santa Ifigênia</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">~1899</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">Bahia</span>
+        <span class="chrono-event">Nasce a filha Mélanie</span>
+        <div class="chrono-who">Mélanie de Almeida Couto, filha do casal, recebe o nome da mãe. Confirmada pelo edital de proclamas de jun/1921 — tinha 22 anos.</div>
+        <span class="chrono-src">edital proclamas 1921</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">~1907</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">Goiás</span>
+        <span class="chrono-event">Nasce Alice em Goiás</span>
+        <div class="chrono-who">Alice de Almeida Couto, filha do casal, nasce em Goiás — sugere que João Paulo já atuava como juiz na região.</div>
+        <span class="chrono-src">óbito Alice 1960</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1908</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">Paranaíba · Mato Grosso</span>
+        <span class="chrono-event">Juiz na comarca de Paranaíba</span>
+        <div class="chrono-who">Matéria do TJMS confirma: <em>"Paranaíba foi comarca de sete desembargadores do TJMS"</em>. João Paulo entre eles.</div>
+        <span class="chrono-src">TJMS · O Progresso</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1911-06</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">Alagoas</span>
+        <span class="chrono-event">Juiz Substituto Federal</span>
+        <div class="chrono-who">Assume em 1º de junho de 1911 após a saída de Julio Auto. Permanece até junho de 1912.</div>
+        <span class="chrono-src">JFAL Memorial</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">após 1912</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">Acre</span>
+        <span class="chrono-event">Juiz de Direito no Acre</span>
+        <div class="chrono-who">JFAL: "Posteriormente, foi Juiz de Direito no Acre." Hipótese familiar do testemunho oral o coloca como Presidente do Tribunal de Apelação — <em>ainda não confirmado</em>.</div>
+        <span class="chrono-src">JFAL Memorial</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1915-16</div>
+      <div class="chrono-dot gold"></div>
+      <div class="chrono-body gold">
+        <span class="chrono-place">?</span>
+        <span class="chrono-event">Relacionamento com Alice Portella</span>
+        <div class="chrono-who"><strong>Cronologia surpreendente:</strong> Eunice nasce em 02-ago-1916, concepção ~nov/1915 — Mélanie ainda viva, morre apenas em 15-mar-1916.</div>
+        <span class="chrono-src hipotese">inferido</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1916-03</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">São Paulo · Consolação</span>
+        <span class="chrono-event">Falecimento da 1ª esposa</span>
+        <div class="chrono-who">Mélanie Françoise Jory falece em 15-mar-1916 de câncer, em São Paulo. Sepultada no Cemitério da Consolação, sob nº 74.511.</div>
+        <span class="chrono-src">sepultamento 1916</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1916-08</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">Bahia</span>
+        <span class="chrono-event">Nasce Eunice (filha de Alice Portella)</span>
+        <div class="chrono-who">Eunice Portela Couto nasce em 02-ago-1916 na Bahia, cinco meses após o falecimento de Mélanie.</div>
+        <span class="chrono-src">batismo Tijuca 1919</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1919-09</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">Rio de Janeiro · Tijuca</span>
+        <span class="chrono-event">Batismo de Eunice</span>
+        <div class="chrono-who">Eunice é batizada na Tijuca em 04-set-1919, registro nº 920. Padrinhos: Dr. Rivadavia da Cunha Corrêa e D. Maria Umbellina da Cunha Corrêa. Família mudou para o RJ entre 1916 e 1919.</div>
+        <span class="chrono-src">batismo Tijuca</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1921-06</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">Salvador · Itapagipe</span>
+        <span class="chrono-event">Edital de casamento da filha Mélanie</span>
+        <div class="chrono-who">Edital de proclamas de 22-jun-1921 (1º Distrito de Pirajá) — João Paulo é mencionado como "Dr. João Paulo de Almeida Couto", <strong>residente em Itapagipe</strong>. A mãe Mélanie como "já falecida".</div>
+        <span class="chrono-src">edital proclamas BA</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1921-09</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">Salvador · Itapagipe</span>
+        <span class="chrono-event">Edital de casamento de Alfredo × Guiomar</span>
+        <div class="chrono-who">Diário Officcial da Bahia, setembro de 1921, p.5315. João Paulo novamente referido como residente em Itapagipe — o filho Alfredo já vive ali, no Alto do Pepino 53.</div>
+        <span class="chrono-src">DO Bahia 1921</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">~1925</div>
+      <div class="chrono-dot gold"></div>
+      <div class="chrono-body gold">
+        <span class="chrono-place">Bahia</span>
+        <span class="chrono-event">Casamento com Brasília Portela · nasce Aníbal</span>
+        <div class="chrono-who">Inferido pelo óbito de Aníbal (1965): Brasília aparece como mãe. Cronologia provável: Alice Portella faleceu entre 1916 e 1925; João Paulo casou com a irmã dela.</div>
+        <span class="chrono-src hipotese">inferido</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1925</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">Bahia → Pará</span>
+        <span class="chrono-event">Embarque da família para o Pará</span>
+        <div class="chrono-who">Lista de embarque inclui: <strong>Dr. João Paulo de Almeida Couto, Brasília de Almeida Couto, Alice Almeida Couto, Aníbal Portela Couto, Maria José Portela Couto.</strong> Família junta.</div>
+        <span class="chrono-src">lista embarque 1925</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1925-07-14</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">Salvador</span>
+        <span class="chrono-event">Cerimônia da Esquadra Nacional</span>
+        <div class="chrono-who">"Dr. João Paulo de Almeida Couto" aparece em lista de autoridades baianas no Diário Oficial da Bahia, p.6814 — recepção de telegrama do Ministro da Marinha Felix Pacheco ao Governador Goes Calmon. Confirma inserção na <strong>elite jurídica e política baiana</strong>.</div>
+        <span class="chrono-src">DO Bahia 1925</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">1929-01-20</div>
+      <div class="chrono-dot green"></div>
+      <div class="chrono-body green">
+        <span class="chrono-place">Manaus → Salvador</span>
+        <span class="chrono-event">Último registro vivo</span>
+        <div class="chrono-who">Desembarca em Salvador vindo de Manaus, no vapor <em>Baependy</em>, com Brasília, Aníbal e Maria José. Diário Oficial da Bahia, p.3468.</div>
+        <span class="chrono-src">DO Bahia 1929</span>
+      </div>
+    </div>
+
+    <div class="chrono-card">
+      <div class="chrono-year">~1933</div>
+      <div class="chrono-dot gold"></div>
+      <div class="chrono-body gold">
+        <span class="chrono-place">?</span>
+        <span class="chrono-event">Falecimento (hipótese)</span>
+        <div class="chrono-who">Sem fonte identificada. Pesquisa em curso para localizar o óbito em Salvador, Belém ou Manaus, depois de jan/1929.</div>
+        <span class="chrono-src hipotese">hipótese</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============== CASAMENTOS - ORGANOGRAMA ============== -->
+<section id="casamentos">
+  <div class="section-label">·····  Os quatro relacionamentos  ·····</div>
+  <h2>Casamentos e filhos <span class="ornament">/</span></h2>
+  <p class="section-tag">Três casamentos documentados, um quarto relatado. A ordem entre Alice Portella (2ª) e Brasília Portela (3ª) ainda não está totalmente estabelecida documentalmente.</p>
+
+  <div class="marriages-grid">
+
+    <!-- 1ª - Mélanie Jory -->
+    <article class="m-card">
+      <div class="m-head">
+        <span class="m-order">1ª</span>
+        <span class="m-order-label">primeira esposa</span>
+        <div class="m-spouse">Mélanie Françoise Jory</div>
+        <div class="m-dates">26-mar-1874, Lyon · † 15-mar-1916, São Paulo</div>
+      </div>
+      <div class="m-body">
+        <div class="m-meta">
+          <strong>Casamento:</strong> entre 1892-1898 · registro não localizado<br>
+          <strong>Origem:</strong> francesa, de Lyon · <strong>Morte:</strong> câncer · sepultada no Cemitério da Consolação SP (nº 74.511)
+        </div>
+        <div class="m-kids-label">Filhos</div>
+        <ul class="m-kids">
+
+          <li class="m-kid">
+            <div class="k-name">Carlos <span class="surn">de Almeida Couto</span><span class="k-tag conf">conf.</span></div>
+            <div class="k-info">n. 9-jun-1892, São Paulo · batizado 1898 no Brás</div>
+            <div class="k-spouse">Padrinho: Carlos Martiniano de Amarante Cruz. Status posterior incerto — pode ser o Carlos × Perciliana, pai de Eurides (1929-2024), FamilySearch PM1S-7SZ. <span class="k-tag hip">hip.</span></div>
+          </li>
+
+          <li class="m-kid linha">
+            <div class="k-name">Alfredo <span class="surn">d'Almeida Couto</span><span class="k-tag conf">conf.</span></div>
+            <div class="k-info">n. 20-dez-1893, São Paulo · batizado 1899 no Brás · <strong>bisavô da pesquisadora</strong></div>
+            <div class="k-spouse">Casou em set/1921 com <strong>Guiomar Laurinda de Sant'Anna</strong> (n. 3-mar-1902, Brotas/Salvador). Eletricista; emigrou aos EUA em 1916 (New Bedford, MA); Draft WWI 1917.</div>
+            <div class="k-grand"><em>Filho confirmado:</em> Carlos de Almeida Couto (n. 20-jan-1922 · † 18-mai-2003, Salvador) — avô da pesquisadora. Pela carta de 1945, provavelmente +3 irmãos a identificar.</div>
+          </li>
+
+          <li class="m-kid">
+            <div class="k-name">Mélanie <span class="surn">de Almeida Couto</span><span class="k-tag conf">conf.</span></div>
+            <div class="k-info">n. ~1899, Bahia</div>
+            <div class="k-spouse">Edital de proclamas jun/1921, Pirajá/BA: pretendia casar com <strong>Affonso Barros de Azevedo</strong> (viúvo, 29 anos, filho de Dyonisio Barros de Azevedo e D. Claudina Gregoria de Azevedo). Residia no Povoado da Escada. Assento de casamento ainda não localizado.</div>
+          </li>
+
+          <li class="m-kid">
+            <div class="k-name">Alice <span class="surn">de Almeida Couto</span><span class="k-tag conf">conf.</span></div>
+            <div class="k-info">n. ~1906-1907, Goiás · † 18-jul-1960, Belém PA (óbito nº 66.108)</div>
+            <div class="k-spouse">Casou com <strong>Armando dos Santos Alves</strong>.</div>
+            <div class="k-grand"><em>9 filhos dos Santos Alves:</em> Maria Thereza, Maria de Nazareth, Maria de Lourdes, João Paulo, Antonio Armando, Anna Maria, Luiz Gonzaga, Maria da Conceição, Armando</div>
+          </li>
+
+          <li class="m-kid">
+            <div class="k-name">Daria <span class="surn">de Almeida Couto</span><span class="k-tag test">test.</span></div>
+            <div class="k-info">mencionada pelo testemunho oral da prima · sem documento ainda</div>
+          </li>
+
+        </ul>
+      </div>
+    </article>
+
+    <!-- 2ª - Alice Portella -->
+    <article class="m-card">
+      <div class="m-head">
+        <span class="m-order">2ª</span>
+        <span class="m-order-label">segunda esposa</span>
+        <div class="m-spouse">Alice Portella Couto</div>
+        <div class="m-dates">datas desconhecidas · provável óbito entre 1916 e 1925</div>
+      </div>
+      <div class="m-body">
+        <div class="m-meta">
+          <strong>Casamento:</strong> assento não localizado<br>
+          Concepção de Eunice em nov/1915 (Mélanie ainda viva); casamento provavelmente formalizado após 1916. <strong>Família Portela é baiana.</strong>
+        </div>
+        <div class="m-kids-label">Filhos</div>
+        <ul class="m-kids">
+
+          <li class="m-kid">
+            <div class="k-name">Eunice <span class="surn">Portela Couto</span><span class="k-tag conf">conf.</span></div>
+            <div class="k-info">n. 2-ago-1916, Bahia · batizada 4-set-1919, Tijuca/RJ (nº 920)</div>
+            <div class="k-spouse">Padrinhos: Dr. Rivadavia da Cunha Corrêa e D. Maria Umbellina da Cunha Corrêa.</div>
+          </li>
+
+          <li class="m-kid">
+            <div class="k-name">Maria José <span class="surn">Portela Couto</span><span class="k-tag hip">hip.</span></div>
+            <div class="k-info">aparece em listas de embarque (1925, 1929) com a família</div>
+            <div class="k-spouse">Mãe não confirmada — pode ser de Alice Portella ou Brasília.</div>
+          </li>
+
+          <li class="m-kid">
+            <div class="k-name">Álvaro <span class="surn">Portela d'Almeida Couto</span><span class="k-tag hip">hip.</span></div>
+            <div class="k-info">† provável 1983, Belém/PA · sepultado no Cemitério Santa Izabel</div>
+            <div class="k-spouse">Casou com <strong>Guiomar Ribeiro D'Almeida Couto-Travani</strong>.</div>
+            <div class="k-grand"><em>4 filhos:</em> Jorge, Álvaro, Olga, Silvia</div>
+          </li>
+
+        </ul>
+      </div>
+    </article>
+
+    <!-- 3ª - Brasília Portela -->
+    <article class="m-card">
+      <div class="m-head">
+        <span class="m-order">3ª</span>
+        <span class="m-order-label">terceira esposa</span>
+        <div class="m-spouse">Brasília Portela de Almeida Couto</div>
+        <div class="m-dates">datas desconhecidas</div>
+      </div>
+      <div class="m-body">
+        <div class="m-meta">
+          <strong>Casamento:</strong> inferido ~1920-1925 (irmã de Alice Portella, casamento sequencial)<br>
+          Aparece em listas de embarque (1925 Bahia→Pará) e Diário Oficial BA (jan/1929 Manaus→Salvador). <strong>Confirmada como mãe pelo óbito de Aníbal em 1965.</strong>
+        </div>
+        <div class="m-kids-label">Filhos</div>
+        <ul class="m-kids">
+
+          <li class="m-kid">
+            <div class="k-name">Aníbal <span class="surn">Portela de Almeida Couto</span><span class="k-tag conf">conf.</span></div>
+            <div class="k-info">n. ~1925, Bahia · † 26-jul-1965, Salvador/BA (óbito nº 19.030)</div>
+            <div class="k-spouse">Funcionário Público. Casado com <strong>Eltair Castrigy de Almeida Couto</strong>. Morava na Rua Guedes Cabral 8, Rio Vermelho. Colapso cardíaco. Sepultado no Campo Santo.</div>
+            <div class="k-grand"><em>Filho:</em> Álvaro Augusto Castrigy de Almeida Couto (~1953 · † 15-fev-1962, ~9 anos, peritonite no Hospital Getúlio Vargas — três anos antes do pai)</div>
+          </li>
+
+        </ul>
+      </div>
+    </article>
+
+    <!-- 4ª - hipotética -->
+    <article class="m-card uncertain">
+      <div class="m-head">
+        <span class="m-order">4ª</span>
+        <span class="m-order-label">esposa hipotética</span>
+        <div class="m-spouse">Quarta irmã Portela <span class="k-tag test">test.</span></div>
+        <div class="m-dates">identidade desconhecida</div>
+      </div>
+      <div class="m-body">
+        <div class="m-meta">
+          Segundo testemunho oral da prima, havia uma quarta irmã Portela que <em>esperava casar</em> com João Paulo, mas ele morreu antes que o casamento se realizasse.
+        </div>
+        <div class="m-kids-label">Sem filhos registrados</div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ============== FILHOS - DESTAQUE ============== -->
+<section id="filhos">
+  <div class="section-label">·····  A descendência  ·····</div>
+  <h2>Os filhos identificados <span class="ornament">/</span></h2>
+  <p class="section-tag">Nove filhos confirmados ou prováveis. Mais nomes (Navo, Francisco, Julio, Leon Lecureux) aparecem em transcrição secundária do óbito de Mélanie 1916, ainda não verificada no documento original.</p>
+
+  <div class="card confirmado">
+    <h3>Resumo da descendência</h3>
+    <ul>
+      <li><strong>Com Mélanie Françoise Jory</strong> (1ª) — pelo menos 5 filhos: Carlos, Alfredo, Mélanie (filha), Alice, Daria (testemunho oral).</li>
+      <li><strong>Com Alice Portella Couto</strong> (2ª) — 1 confirmada (Eunice) e 2 hipotéticos (Maria José, Álvaro Portela).</li>
+      <li><strong>Com Brasília Portela</strong> (3ª) — 1 confirmado (Aníbal).</li>
+      <li><strong>4ª esposa hipotética</strong> — sem filhos relatados.</li>
+    </ul>
+  </div>
+
+  <div class="note alert">
+    <strong>Mistério da concepção de Eunice:</strong> Mélanie Jory morre em 15-mar-1916; Eunice nasce em 02-ago-1916. A concepção ocorreu por volta de novembro de 1915 — quando Mélanie <em>ainda estava viva</em>. Implica relacionamento simultâneo com Alice Portella. Eunice é a primeira filha conhecida da segunda família.
+  </div>
+</section>
+
+<!-- ============== HIPÓTESES ============== -->
+<section id="hipoteses-jp">
+  <div class="section-label">·····  Em aberto  ·····</div>
+  <h2>Hipóteses sobre João Paulo <span class="ornament">/</span></h2>
+  <p class="section-tag">As perguntas que ainda guiam a pesquisa.</p>
+
+  <div class="card hipotese">
+    <h3>Foi Presidente do Tribunal de Apelação do Acre?</h3>
+    <p>JFAL confirma apenas "Juiz de Direito no Acre" — não desembargador nem presidente. A prima da família diz "Presidente do Tribunal de Justiça do Acre". Três versões possíveis: (a) a prima inflacionou; (b) começou como Juiz e ascendeu; (c) foi mesmo só Juiz de Direito.</p>
+    <p><strong>Próximos passos:</strong> contatar TJAC (memoria@tjac.jus.br) e buscar o livro <em>"O Acre Judiciário"</em> de Alberto Augusto Diniz.</p>
+  </div>
+
+  <div class="card hipotese">
+    <h3>Faleceu em 1933?</h3>
+    <p>Sem fonte identificada. Confirmado vivo em jan/1929 (Diário Oficial BA) e em set/1921 (Itapagipe BA).</p>
+    <p><strong>Próximos passos:</strong> buscar óbito em Salvador, Belém ou Manaus, no período pós-1929.</p>
+  </div>
+
+  <div class="card hipotese">
+    <h3>É parente do Conselheiro José Luiz de Almeida Couto (1833-1895)?</h3>
+    <p>O Conselheiro foi figura ilustre da Bahia oitocentista: Presidente das Províncias de SP (1884) e BA (1885 e 1889), Intendente de Salvador, Senador, Patrono do Corpo de Bombeiros da Bahia. <strong>A Praça e a Rua Conselheiro Almeida Couto, em Nazaré/Salvador, foram nomeadas em homenagem a ele.</strong> Foi exatamente nessa praça que Alfredo (filho de João Paulo) fez a fonte luminosa — se confirmada a parentela, Alfredo estava trabalhando na praça do próprio tio ou tio-avô.</p>
+    <p><strong>Hipótese mais provável:</strong> João Paulo seria <em>sobrinho</em> do Conselheiro.</p>
+    <p><strong>Próximos passos:</strong> identificar os irmãos do Conselheiro — filhos do Coronel Joaquim Caetano e Luiza Benvinda Dorea Couto.</p>
+  </div>
+
+  <div class="card hipotese">
+    <h3>É parente do Barão do Desterro (1812-1900)?</h3>
+    <p>João José de Almeida Couto, Barão do Desterro, foi Ministro do Supremo Tribunal de Justiça, Presidente da Província da Bahia 4 vezes, Juiz no Pará. <em>Os pais do Barão são diferentes dos pais do Conselheiro</em> — não são irmãos. Mas a coincidência da carreira jurídica e do trajeto Pará-Bahia sugere parentesco mais distante.</p>
+  </div>
+
+  <div class="card hipotese">
+    <h3>Outros possíveis filhos (transcrição secundária)</h3>
+    <p>Da transcrição secundária do óbito de Mélanie 1916 (sem acesso ao original): aparecem nomes como <em>Navo, Francisco, Julio, Leon Lecureux</em>. Podem ser filhos com as Portelas, erros de transcrição ou referências a terceiros.</p>
+    <p><strong>Ação crítica:</strong> acessar o documento original no Cemitério da Consolação SP.</p>
+  </div>
+</section>
+
+<!-- ============== FONTES ============== -->
+<section id="fontes-jp">
+  <div class="section-label">·····  Documentos primários  ·····</div>
+  <h2>Fontes utilizadas <span class="ornament">/</span></h2>
+  <p class="section-tag">Tudo nesta página vem desses registros. Para imagens dos documentos, ver a Galeria da página principal.</p>
+
+  <div class="card">
+    <h3>Edital de proclamas — 22-jun-1921, Pirajá/BA</h3>
+    <p>Juízo de Paz do 1º Distrito de Pirajá, Bahia. Publica intenção de casamento entre Mélanie de Almeida Couto e Affonso Barros de Azevedo. <strong>Confirma:</strong> existência da filha Mélanie, vida do pai João Paulo em Itapagipe, falecimento da mãe Mélanie Jory em São Paulo.</p>
+  </div>
+
+  <div class="card">
+    <h3>Edital de proclamas — set/1921, Diário Official da Bahia (p.5315)</h3>
+    <p>Juízo de Paz do Distrito de Brotas, Salvador. Publica intenção de casamento de Alfredo × Guiomar. <strong>Confirma:</strong> Alfredo eletricista; João Paulo vivo em Itapagipe; nome completo da bisavó Guiomar Laurinda de Sant'Anna; pais dela: Cassiano José de Santa Anna e D. Emilia Laurinda de Santa Anna.</p>
+  </div>
+
+  <div class="card">
+    <h3>Diário Oficial da Bahia — 14-jul-1925 (p.6814)</h3>
+    <p>"Dr. João Paulo de Almeida Couto" aparece em lista de autoridades baianas na recepção do telegrama do Ministro da Marinha sobre a Esquadra Nacional. <strong>Confirma:</strong> título "Dr.", presença em Salvador em julho de 1925, inserção na elite jurídica e política baiana.</p>
+  </div>
+
+  <div class="card">
+    <h3>Diário Oficial da Bahia — 20-jan-1929 (p.3468)</h3>
+    <p>Entrada de passageiros do vapor <em>Baependy</em>, vindo de Manaus. <strong>Passageiros:</strong> Dr. João Paulo de Almeida Couto, Brasília de Almeida Couto, Aníbal de Almeida Couto, Maria José Almeida Couto. <strong>Último registro confirmado de João Paulo vivo.</strong></p>
+  </div>
+
+  <div class="card">
+    <h3>Lista de embarque — 11-mar-1888, vapor Valparaiso</h3>
+    <p>Bahia → Santos. <strong>Confirma:</strong> João Paulo deixa a Bahia para São Paulo aos ~22-25 anos.</p>
+  </div>
+
+  <div class="card">
+    <h3>Lista de embarque — 1925, Bahia → Pará</h3>
+    <p>Família completa embarca para o Pará: João Paulo, Brasília, Alice (filha), Aníbal Portela, Maria José Portela. Junto: família Roque Almeida (Henrique, José, Antonio, Carlos — parentesco a investigar), Amalia d'A. Wanderley, Reginaldo P. Murillo.</p>
+  </div>
+
+  <div class="card">
+    <h3>Batismos em São Paulo (1894-1899)</h3>
+    <p>Santa Ifigênia 1894 e 1896: João Paulo e Mélanie como padrinhos. Brás 1898: batismo de Carlos. Brás 1899: batismo de Alfredo.</p>
+  </div>
+
+  <div class="card">
+    <h3>Batismo de Eunice — 4-set-1919, Tijuca/RJ (nº 920)</h3>
+    <p><strong>Confirma:</strong> Alice Portella Couto como esposa do "Dr. João Paulo de Almeida Couto" em 1919.</p>
+  </div>
+
+  <div class="card">
+    <h3>Sepultamento de Mélanie Jory — 15-mar-1916, Consolação SP (nº 74.511)</h3>
+    <p><strong>Confirma:</strong> morte da 1ª esposa, causa câncer, sepultamento. Índice fl.47.</p>
+  </div>
+
+  <div class="card">
+    <h3>Óbitos da descendência</h3>
+    <p><strong>Alice Almeida Couto Alves</strong> — 18-jul-1960, Belém PA, nº 66.108. Filha legítima de João Paulo e Mélanie. <strong>Aníbal Portela de Almeida Couto</strong> — 26-jul-1965, Salvador BA, nº 19.030. Filho de João Paulo e Brasília. <strong>Álvaro Augusto Castrigy de Almeida Couto</strong> — 15-fev-1962, Salvador BA, nº 18.432. Neto (filho de Aníbal).</p>
+  </div>
+
+  <div class="card">
+    <h3>Fontes institucionais</h3>
+    <ul>
+      <li><strong>JFAL Memorial</strong> — "Memórias da Primeira Fase da Justiça Federal em Alagoas (1890-1937)" — <a href="https://www.jfal.jus.br/institucional/memorial/" target="_blank">jfal.jus.br/institucional/memorial</a></li>
+      <li><strong>TJMS / Jornal O Progresso</strong> — "Rastros da História: Paranaíba foi comarca de sete desembargadores do TJMS"</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ============== RODAPÉ ============== -->
+<a href="index.html" class="back-link" style="display:block;margin:40px 0 20px;text-align:center">Voltar para a página principal</a>
+
+</main>
+
+<footer>
+  Pesquisadora · Bruna · maio de 2026 · v6<br>
+  Página dedicada a João Paulo de Almeida Couto — parte do site Família Jory / Almeida Couto<br>
+  Toda informação acompanha sua fonte. O que não foi confirmado documentalmente está marcado.
+</footer>
+
+</body>
+</html>
