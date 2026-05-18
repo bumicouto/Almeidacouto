@@ -485,6 +485,151 @@ footer{
   margin-left:18px;
 }
 
+/* ---------- panorama / organograma visual ---------- */
+.panorama-intro{
+  background:#fbf6e9;
+  border:1px solid var(--paper-3);
+  border-left:3px solid var(--gold);
+  padding:18px 22px;
+  margin:18px 0 28px;
+  font-style:italic;
+  color:#3d2a17;
+}
+.tree-wrap{
+  background:#fcfaf3;
+  border:1px solid var(--paper-3);
+  padding:28px 14px 24px;
+  overflow-x:auto;
+  box-shadow:0 1px 3px var(--shadow);
+  margin:18px 0;
+}
+.tree-row{
+  display:flex;
+  justify-content:center;
+  align-items:stretch;
+  gap:14px;
+  flex-wrap:nowrap;
+  margin-bottom:6px;
+  min-width:max-content;
+}
+.tree-couple{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.tc-x{
+  font-family:'Fraunces',serif;
+  color:var(--rust);
+  font-size:18px;
+  font-weight:600;
+}
+.tree-gen-label{
+  text-align:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#7a5e3a;
+  margin:20px 0 8px;
+}
+.tree-node{
+  background:#fff;
+  border:1.5px solid var(--paper-3);
+  padding:9px 13px;
+  min-width:140px;
+  max-width:200px;
+  text-align:center;
+  border-radius:3px;
+  box-shadow:0 1px 2px rgba(60,40,20,.08);
+  position:relative;
+  font-size:14px;
+  line-height:1.3;
+}
+.tree-node .tn-name{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  font-size:14.5px;
+  color:var(--ink);
+  display:block;
+}
+.tree-node .tn-name em{
+  color:var(--rust);
+  font-style:italic;
+  font-weight:500;
+}
+.tree-node .tn-dates{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  color:#5a4a3a;
+  letter-spacing:.03em;
+  margin-top:3px;
+  display:block;
+}
+.tree-node .tn-place{
+  font-size:11.5px;
+  color:#5a3e22;
+  font-style:italic;
+  margin-top:2px;
+  display:block;
+}
+.tree-node.linha{
+  border-color:var(--rust);
+  border-width:2px;
+  background:#fbf0eb;
+}
+.tree-node.linha .tn-name{color:var(--rust)}
+.tree-node.hipotese{
+  border-color:var(--amber);
+  border-style:dashed;
+  background:#fcf6e3;
+}
+.tree-node.aside{
+  background:var(--paper-2);
+  border-color:#a89880;
+}
+.tree-node.novo{
+  border-color:var(--amber);
+  border-width:2px;
+  background:#fbeed6;
+}
+.tree-node.atual{
+  border-color:var(--green);
+  border-width:2px;
+  background:#e8f0e3;
+}
+.tree-node.atual .tn-name{color:var(--green)}
+.tree-connector{
+  width:2px;
+  height:22px;
+  background:var(--sepia);
+  margin:0 auto;
+}
+.tree-legend{
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px dashed var(--paper-3);
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px 22px;
+  justify-content:center;
+  font-size:12px;
+  color:#5a3e22;
+}
+.tl-swatch{
+  display:inline-block;
+  width:16px;height:12px;
+  border:1.5px solid var(--paper-3);
+  background:#fff;
+  border-radius:2px;
+  vertical-align:-2px;
+  margin-right:5px;
+}
+.tl-swatch.linha{border-color:var(--rust);border-width:2px;background:#fbf0eb}
+.tl-swatch.hipotese{border-color:var(--amber);border-style:dashed;background:#fcf6e3}
+.tl-swatch.novo{border-color:var(--amber);border-width:2px;background:#fbeed6}
+.tl-swatch.atual{border-color:var(--green);border-width:2px;background:#e8f0e3}
+.tl-swatch.aside{background:var(--paper-2);border-color:#a89880}
+
 /* ---------- responsive ---------- */
 @media (max-width:640px){
   body{font-size:17px}
@@ -513,6 +658,7 @@ footer{
 </header>
 
 <nav class="toc">
+  <a href="#panorama">Panorama</a>
   <a href="#novidades">v6 · Novidades</a>
   <a href="#cronologia">Cronologia</a>
   <a href="#arvore">Árvore</a>
@@ -539,6 +685,236 @@ footer{
     <li><span class="tag novo">Novo</span> descoberta da versão v6 (maio/2026)</li>
   </ul>
 </div>
+
+<!-- ============ PANORAMA / ORGANOGRAMA ============ -->
+<section id="panorama">
+  <h2><span class="num">§ — em um relance</span>Panorama · árvore visual</h2>
+  <p class="lead">Cinco gerações em uma vista só. Linha direta destacada em vermelho. Para os detalhes documentais, siga para a Árvore completa.</p>
+
+  <div class="panorama-intro">
+    De Lyon (1871) a Salvador (hoje) — passando por São Paulo, Goiás, Bahia, Acre, Itália (FEB) e Pará. Cada caixinha é uma pessoa; cada × é um casamento; cada linha vertical é uma descendência.
+  </div>
+
+  <div class="tree-wrap">
+
+    <!-- 5ª geração · pentavós franceses -->
+    <div class="tree-gen-label">5ª geração · pentavós · França</div>
+    <div class="tree-row">
+      <div class="tree-couple">
+        <div class="tree-node">
+          <span class="tn-name">Philibert <em>Jory</em></span>
+          <span class="tn-dates">† 2-jun-1869 · Lyon 4e</span>
+        </div>
+        <span class="tc-x">×</span>
+        <div class="tree-node">
+          <span class="tn-name">Anne Marie <em>Marmonnier</em></span>
+          <span class="tn-place">tecelã · Caluire</span>
+        </div>
+      </div>
+      <div class="tree-couple" style="margin-left:30px">
+        <div class="tree-node">
+          <span class="tn-name">Christian <em>Matagotte</em></span>
+        </div>
+        <span class="tc-x">×</span>
+        <div class="tree-node">
+          <span class="tn-name">Mélanie <em>Dechenaux</em></span>
+          <span class="tn-place">Bourg-en-Bresse, Ain</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tree-connector"></div>
+
+    <!-- 4ª geração · tetravós (François + Rose) -->
+    <div class="tree-gen-label">4ª geração · tetravós · Lyon</div>
+    <div class="tree-row">
+      <div class="tree-couple">
+        <div class="tree-node">
+          <span class="tn-name">François <em>Jory</em></span>
+          <span class="tn-dates">25-dez-1845 · Croix-Rousse Lyon<br>† 26-set-1888 · Paris 2e</span>
+          <span class="tn-place">agente de publicidade</span>
+        </div>
+        <span class="tc-x">×</span>
+        <div class="tree-node">
+          <span class="tn-name">Rose Péroline <em>Matagotte</em></span>
+          <span class="tn-dates">24-nov-1845 · Isère<br>casam 28-nov-1871 · Lyon 4e</span>
+          <span class="tn-place">costureira</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tree-connector"></div>
+
+    <!-- 3ª geração · trisavós (Mélanie + Joséphine irmãs, depois Mélanie × João Paulo) -->
+    <div class="tree-gen-label">3ª geração · trisavós · duas irmãs</div>
+    <div class="tree-row">
+      <div class="tree-node">
+        <span class="tn-name">Mélanie Françoise <em>Jory</em></span>
+        <span class="tn-dates">26-mar-1874 Lyon 4e<br>† 15-mar-1916 SP · câncer</span>
+        <span class="tn-place">tataravó</span>
+      </div>
+      <div class="tree-node aside">
+        <span class="tn-name">Joséphine <em>Jory</em></span>
+        <span class="tn-dates">10-jun-1877 Lyon 2e<br>† 1929</span>
+        <span class="tn-place">irmã · casa Anthelme Gonnellaz<br>(Belley, 1905) · 4 filhos na França</span>
+      </div>
+    </div>
+
+    <div class="tree-connector"></div>
+
+    <!-- 3ª geração · casal central (Mélanie × João Paulo) -->
+    <div class="tree-gen-label">o casal central</div>
+    <div class="tree-row">
+      <div class="tree-couple">
+        <div class="tree-node">
+          <span class="tn-name">Mélanie Françoise <em>Jory</em></span>
+          <span class="tn-dates">1874 — 1916</span>
+        </div>
+        <span class="tc-x">×</span>
+        <div class="tree-node">
+          <span class="tn-name">João Paulo <em>de Almeida Couto</em></span>
+          <span class="tn-dates">~1862 — ? (Bahia)</span>
+          <span class="tn-place">juiz · desembargador<br>4 casamentos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tree-connector"></div>
+
+    <!-- Filhos: Alfredo NÃO duplica, é caixa única (linha vermelha desce dele) -->
+    <div class="tree-gen-label">filhos de Mélanie × João Paulo</div>
+    <div class="tree-row">
+      <div class="tree-node">
+        <span class="tn-name">Carlos</span>
+        <span class="tn-dates">9-jun-1892 · SP</span>
+        <span class="tn-place">primogênito</span>
+      </div>
+      <div class="tree-node linha">
+        <span class="tn-name">Alfredo <em>d'Almeida Couto</em></span>
+        <span class="tn-dates">20-dez-1893 · SP · † ? Salvador</span>
+        <span class="tn-place">bisavô · linha direta</span>
+      </div>
+      <div class="tree-node">
+        <span class="tn-name">Mélanie</span>
+        <span class="tn-dates">~1899 · Bahia</span>
+        <span class="tn-place">casa Affonso Azevedo<br>(Pirajá, 1921)</span>
+      </div>
+      <div class="tree-node">
+        <span class="tn-name">Alice</span>
+        <span class="tn-dates">~1906-07 Goiás · † 18-jul-1960 Belém</span>
+        <span class="tn-place">casa Armando Alves · 9 filhos</span>
+      </div>
+      <div class="tree-node hipotese">
+        <span class="tn-name">Daria</span>
+        <span class="tn-place">testemunho oral<br>sem documento</span>
+      </div>
+    </div>
+
+    <div class="tree-connector"></div>
+
+    <!-- 2ª geração: Alfredo (mesmo nó) × Guiomar -->
+    <div class="tree-gen-label">2ª geração · bisavós · linha direta</div>
+    <div class="tree-row">
+      <div class="tree-couple">
+        <div class="tree-node linha">
+          <span class="tn-name">Alfredo <em>d'Almeida Couto</em></span>
+          <span class="tn-dates">20-dez-1893 SP · † ? Salvador</span>
+          <span class="tn-place">EUA 1917 · Salvador 1921+</span>
+        </div>
+        <span class="tc-x">×</span>
+        <div class="tree-node linha">
+          <span class="tn-name">Guiomar <em>Laurinda de Sant'Anna</em></span>
+          <span class="tn-dates">~1904 Bahia · † ?</span>
+          <span class="tn-place">Salvador · casam set/1921</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tree-connector"></div>
+
+    <!-- 1ª geração: Carlos avô × Noélia -->
+    <div class="tree-gen-label">1ª geração · avô · linha direta</div>
+    <div class="tree-row">
+      <div class="tree-couple">
+        <div class="tree-node linha">
+          <span class="tn-name">Carlos <em>de Almeida Couto</em></span>
+          <span class="tn-dates">20-jan-1922 Salvador<br>† 18-mai-2003 Salvador</span>
+          <span class="tn-place">FEB · Itália 1944-45<br>bancário</span>
+        </div>
+        <span class="tc-x">×</span>
+        <div class="tree-node novo">
+          <span class="tn-name">Noélia <em>Ribeiro Coelho</em></span>
+          <span class="tn-dates">3-fev-1923 Bahia · † ?</span>
+          <span class="tn-place">Salvador · casam 20-mai-1953<br>bancária</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tree-connector"></div>
+
+    <!-- Filhos de Carlos × Noélia: Carlos Alfredo é o caminho da linha direta -->
+    <div class="tree-gen-label">filhos de Carlos × Noélia</div>
+    <div class="tree-row">
+      <div class="tree-node linha novo">
+        <span class="tn-name">Carlos Alfredo</span>
+        <span class="tn-place">pai da pesquisadora<br>linha direta</span>
+      </div>
+      <div class="tree-node novo">
+        <span class="tn-name">Ana Verena</span>
+      </div>
+      <div class="tree-node novo">
+        <span class="tn-name">Márcia Cristina</span>
+      </div>
+      <div class="tree-node novo">
+        <span class="tn-name">Paulo Roberto</span>
+      </div>
+    </div>
+
+    <div class="tree-connector"></div>
+
+    <!-- geração do pai: Carlos Alfredo × Genalva -->
+    <div class="tree-gen-label">geração do pai · linha direta</div>
+    <div class="tree-row">
+      <div class="tree-couple">
+        <div class="tree-node linha">
+          <span class="tn-name">Carlos Alfredo <em>de Almeida Couto</em></span>
+          <span class="tn-place">Salvador</span>
+        </div>
+        <span class="tc-x">×</span>
+        <div class="tree-node linha">
+          <span class="tn-name">Genalva <em>Oliveira Santana</em></span>
+          <span class="tn-place">de Almeida Couto</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tree-connector"></div>
+
+    <!-- Pesquisadora -->
+    <div class="tree-gen-label">geração atual · pesquisadora</div>
+    <div class="tree-row">
+      <div class="tree-node atual">
+        <span class="tn-name">Bruna <em>Oliveira de Almeida Couto</em> ★</span>
+        <span class="tn-place">conduz esta pesquisa</span>
+      </div>
+    </div>
+
+    <!-- legenda -->
+    <div class="tree-legend">
+      <span><span class="tl-swatch linha"></span> linha direta até hoje</span>
+      <span><span class="tl-swatch"></span> documentado</span>
+      <span><span class="tl-swatch novo"></span> v6 · nova descoberta</span>
+      <span><span class="tl-swatch atual"></span> pesquisadora</span>
+      <span><span class="tl-swatch hipotese"></span> a confirmar</span>
+      <span><span class="tl-swatch aside"></span> ramo lateral</span>
+    </div>
+
+  </div>
+
+  <p style="margin-top:14px;font-size:14px;color:#7a5e3a;font-style:italic;text-align:center">
+    O organograma resume; a <a href="#arvore" style="color:var(--rust)">árvore detalhada</a> traz fontes e detalhes de cada pessoa.
+  </p>
+</section>
 
 <!-- ============ NOVIDADES v6 ============ -->
 <section id="novidades">
@@ -577,8 +953,12 @@ footer{
 
   <div class="chrono">
     <div class="chrono-item confirmado">
-      <div class="chrono-year">1869 · LYON, FRANÇA</div>
-      <div class="chrono-body">Casamento de <strong>Joannès Jory</strong> com <strong>Joséphine Matagotte</strong> — tetravós franceses.</div>
+      <div class="chrono-year">2 JUN 1869 · LYON, FRANÇA</div>
+      <div class="chrono-body">Morre <strong>Philibert Jory</strong> em Lyon 4e — pentavô paterno da pesquisadora.</div>
+    </div>
+    <div class="chrono-item confirmado">
+      <div class="chrono-year">28 NOV 1871 · LYON 4e</div>
+      <div class="chrono-body">Casamento de <strong>François Jory</strong> (filho de Philibert e Anne Marie Marmonnier) com <strong>Rose Péroline Matagotte</strong> (filha de Christian Matagotte e Mélanie Dechenaux) — tetravós franceses.</div>
     </div>
     <div class="chrono-item confirmado">
       <div class="chrono-year">26 MAR 1874 · LYON</div>
@@ -722,11 +1102,16 @@ footer{
 
   <!-- 5ª geração -->
   <div class="gen">
-    <span class="gen-label">5ª geração · tetravós</span>
+    <span class="gen-label">5ª geração · pentavós</span>
     <div class="person">
-      <div class="person-name">Joannès Jory × Joséphine Matagotte</div>
-      <div class="person-dates">casados em 1869, Lyon</div>
-      <div class="person-detail">Os tetravós franceses, em Lyon. <span class="tag confirmado">Confirmado</span></div>
+      <div class="person-name">Philibert Jory × Anne Marie Marmonnier</div>
+      <div class="person-dates">Philibert †2-jun-1869 Lyon 4e · Anne Marie, tecelã em Caluire</div>
+      <div class="person-detail">Pentavós paternos (lado Jory). <span class="tag confirmado">Confirmado · acte de mariage 1871</span></div>
+    </div>
+    <div class="person">
+      <div class="person-name">Christian Matagotte × Mélanie Dechenaux</div>
+      <div class="person-dates">residentes em Bourg-en-Bresse (Ain) em 1871</div>
+      <div class="person-detail">Pentavós maternos (lado Matagotte). <em>O nome "Mélanie" passou da pentavó para a tataravó.</em> <span class="tag confirmado">Confirmado · acte de mariage 1871</span></div>
     </div>
     <div class="person">
       <div class="person-name">Família Almeida Couto · Bahia</div>
@@ -737,16 +1122,30 @@ footer{
 
   <!-- 4ª geração -->
   <div class="gen">
-    <span class="gen-label">4ª geração · trisavós franceses</span>
+    <span class="gen-label">4ª geração · tetravós franceses</span>
+    <div class="person">
+      <div class="person-name">François Jory × Rose Péroline Matagotte</div>
+      <div class="person-dates">casamento: 28-nov-1871, Lyon 4e</div>
+      <div class="person-detail">
+        <strong>François Jory</strong> (25-dez-1845 Croix-Rousse, Lyon · †26-set-1888 Paris 2e) — agente de publicidade.<br>
+        <strong>Rose Péroline Matagotte</strong> (24-nov-1845 Saint-Étienne de Saint-Geoirs, Isère) — costureira; viúva 1ª vez de François Xavier Lauvergnat (†10-fev-1869).<br>
+        Tiveram duas filhas: Mélanie Françoise (1874) e Joséphine (1877). <span class="tag confirmado">Confirmado · actes de naissance, mariage e décès</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3ª geração -->
+  <div class="gen">
+    <span class="gen-label">3ª geração · trisavós</span>
     <div class="person">
       <div class="person-name">Mélanie Françoise Jory</div>
-      <div class="person-dates">26-mar-1874 Lyon · †15-mar-1916 São Paulo</div>
-      <div class="person-detail">Casa-se com João Paulo de Almeida Couto. Antes, em Paris (1890), tem uma filha — <strong>Jeanne Jory</strong> — que morre aos 4 dias. <span class="tag confirmado">Confirmado</span></div>
+      <div class="person-dates">26-mar-1874 Lyon 4e · †15-mar-1916 São Paulo</div>
+      <div class="person-detail">Tataravó. Casa-se com João Paulo de Almeida Couto. Antes, em Paris (1890), tem uma filha — <strong>Jeanne Jory</strong> (n. 18-abr-1890 Maternité Port-Royal, pai "non dénommé") — que morre aos 4 dias. Morre em SP de câncer, aos 42 anos. <span class="tag confirmado">Confirmado</span></div>
     </div>
     <div class="person">
       <div class="person-name">Joséphine Jory</div>
-      <div class="person-dates">10-jun-1877 Lyon · †1929</div>
-      <div class="person-detail">Irmã de Mélanie. Casa-se em 1905 com Anthelme Gonnellaz, em Belley (Ain). 4 filhos Gonnellaz na França: Louis (1906), Marius (1908), Maria (1910), Anthelme (1910). <span class="tag confirmado">Confirmado</span></div>
+      <div class="person-dates">10-jun-1877 Lyon 2e · †1929</div>
+      <div class="person-detail">Irmã de Mélanie. Casa-se em 25-mai-1905 com Anthelme François Gonnellaz, em Belley (Ain). 4 filhos Gonnellaz na França: Louis (1906), Marius (1908), Maria (1910), Anthelme (1910). <span class="tag confirmado">Confirmado · actes franceses + Geneanet</span></div>
     </div>
   </div>
 
@@ -806,25 +1205,26 @@ footer{
         Bancária. Filha de <strong>Cirilo Ribeiro Coelho</strong> e <strong>D. Maria Honorina Lacerda Coelho</strong>. Casa-se com Carlos em 20-mai-1953, em Salvador. <span class="tag novo">v6</span>
       </div>
     </div>
-    <p style="margin-top:14px;font-style:italic;color:var(--sepia)">Filhos de Carlos e Noélia (declarados no óbito de 2003):</p>
+    <p style="margin-top:14px;font-style:italic;color:var(--sepia)">Filhos de Carlos e Noélia:</p>
     <div class="children">
       <div class="person">
         <div class="person-name">Carlos Alfredo de Almeida Couto</div>
-        <div class="person-detail">Pai da pesquisadora. <span class="tag confirmado">Confirmado · óbito 2003</span></div>
+        <div class="person-detail">Pai da pesquisadora. <span class="tag confirmado">Confirmado</span></div>
       </div>
       <div class="person">
         <div class="person-name">Ana Verena de Almeida Couto</div>
-        <div class="person-detail">Declarante do óbito do pai em 2003. <span class="tag confirmado">Confirmado · óbito 2003</span></div>
+        <div class="person-detail">Declarante do óbito do pai em 2003. <span class="tag confirmado">Confirmado</span></div>
       </div>
       <div class="person">
         <div class="person-name">Márcia Cristina de Almeida Couto</div>
-        <div class="person-detail"><span class="tag confirmado">Confirmado · óbito 2003</span></div>
+        <div class="person-detail"><span class="tag confirmado">Confirmado</span></div>
       </div>
       <div class="person">
         <div class="person-name">Paulo Roberto de Almeida Couto</div>
-        <div class="person-detail"><span class="tag confirmado">Confirmado · óbito 2003</span></div>
+        <div class="person-detail"><span class="tag confirmado">Confirmado</span></div>
       </div>
     </div>
+    <p style="margin-top:10px;font-size:13px;color:#7a5e3a;font-style:italic">Fonte dos 4 nomes: certidão de óbito de Carlos (2003).</p>
   </div>
 
   <!-- geração do pai -->
